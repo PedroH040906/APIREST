@@ -1,10 +1,10 @@
-package pedro.api;
+package pedro.sa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiApplicationTests {
+class SaApplicationTests {
 
 	@Test
 	void contextLoads() {

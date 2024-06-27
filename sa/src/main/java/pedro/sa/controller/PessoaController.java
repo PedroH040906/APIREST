@@ -29,4 +29,17 @@ public class PessoaController {
         List<PessoaResponseDTO> pessoaList = repository.findAll().stream().map(PessoaResponseDTO::new).toList();
         return pessoaList;
     }
+    @DeleteMapping
+    public void deletePessoa(@RequestBody PessoaResponseDTO data) {
+    Pessoa pessoaData = new Pessoa(data);
+    repository.delete(pessoaData);
+    return;
+    }
+    @PutMapping
+    public void updatePessoa(@RequestBody PessoaResponseDTO data) {
+    Pessoa pessoaData = new Pessoa(data);
+    repository.save(pessoaData);
+    return;
+    }
+    
 }

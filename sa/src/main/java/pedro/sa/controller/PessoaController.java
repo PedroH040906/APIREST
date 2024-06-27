@@ -22,10 +22,8 @@ public class PessoaController {
     repository.save(pessoaData);
     return;
     }
-
     @GetMapping
     public List<PessoaResponseDTO> getAll() {
-
         List<PessoaResponseDTO> pessoaList = repository.findAll().stream().map(PessoaResponseDTO::new).toList();
         return pessoaList;
     }
@@ -41,5 +39,4 @@ public class PessoaController {
     repository.save(pessoaData);
     return;
     }
-    
 }

@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import pedro.sa.DTO.EnderecoResponseDTO;
+import pedro.sa.DTO.endereco.endereco.EnderecoResponseDTO;
 import pedro.sa.model.Endereco;
 import pedro.sa.repository.EnderecoRepository;
 

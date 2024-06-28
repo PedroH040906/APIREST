@@ -4,7 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pedro.sa.DTO.PessoaResponseDTO;
+import pedro.sa.DTO.pessoa.PessoaRequestDTO;
+import pedro.sa.DTO.pessoa.PessoaResponseDTO;
 
 @Entity
 @Data
@@ -32,7 +33,5 @@ public class Pessoa {
         this.telefone = data.telefone();
         this.obs = data.obs();
         this.endereco = data.endereco();
-
-
     }
 }

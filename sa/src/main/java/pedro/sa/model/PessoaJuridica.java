@@ -13,7 +13,7 @@ public class PessoaJuridica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id; // Adicionado campo id como chave primária
+    private Long idPessoaJuridica; // Adicionado campo id como chave primária
 
     @OneToOne
     @JoinColumn(name = "idPessoa", referencedColumnName = "idPessoa")

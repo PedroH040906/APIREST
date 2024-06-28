@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pedro.sa.DTO.EnderecoResponseDTO;
+import pedro.sa.DTO.endereco.endereco.EnderecoResponseDTO;
 
 @Entity
 @Data

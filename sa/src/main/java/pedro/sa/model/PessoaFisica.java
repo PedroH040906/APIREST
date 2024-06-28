@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pedro.sa.DTO.pessoaFisica.PessoaFisicaRequestDTO;
+import pedro.sa.DTO.pessoaFisica.PessoaFisicaResponseDTO;
 
 import java.util.Date;
 
@@ -15,7 +17,7 @@ public class PessoaFisica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id; // Adicionado campo id como chave primária
+    private Long idPessoaFisica; // Adicionado campo id como chave primária
 
     @OneToOne
     @JoinColumn(name = "idPessoa", referencedColumnName = "idPessoa")
@@ -24,4 +26,11 @@ public class PessoaFisica {
     private String cpf;
     private Date dataNascimento;
     private char genero;
+
+    public PessoaFisica(PessoaFisicaResponseDTO data){
+        this.pessoa = data.pessoa();
+        this.cpf = data.cpf();
+        this.dataNascimento = data.dataNascimento();
+        this.genero = data.genero();
+    }
 }

@@ -1,14 +1,14 @@
 package pedro.sa.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import pedro.sa.DTO.produto.ProdutoRequestDTO;
+import pedro.sa.DTO.produto.ProdutoResponseDTO;
 
-@Entity
+@Table(name = "produto")
+@Entity(name = "produto")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -24,4 +24,11 @@ public class Produto {
     private String tecido;
     private Boolean estampa;
 
+    public Produto(ProdutoRequestDTO data) {
+        this.estampa = data.estampa();
+        this.tipo = data.tipo();
+        this.cor = data.cor();
+        this.tecido = data.tecido();
+        this.tamanho = data.tamanho();
+    }
 }

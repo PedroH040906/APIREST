@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PessoaJuridica {
+public class PessoaJuridica extends Pessoa{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

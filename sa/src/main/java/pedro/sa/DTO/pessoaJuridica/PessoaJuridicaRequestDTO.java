@@ -1,4 +1,4 @@
-package pedro.sa.DTO.endereco.pessoaJuridica;
+package pedro.sa.DTO.pessoaJuridica;
 
 import pedro.sa.model.Pessoa;
 

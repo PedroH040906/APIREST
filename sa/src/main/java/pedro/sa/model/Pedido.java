@@ -20,8 +20,16 @@ public class Pedido {
     @JoinColumn(name = "idUsuario", referencedColumnName = "idUsuario")
     private Usuario usuario;
 
-    private Date dataPedido; // Corrigido de 'dataPedida' para 'dataPedido'
+    private Date dataPedido;
     private Date dataEntrega;
     private String descricao;
-    private String status;
+    private Status status;
+
+    public enum Status{
+        CORTANDO,
+        COSTURANDO,
+        ESTAMPANDO,
+        CANCELADO,
+        CONCLUIDO,
+    }
 }

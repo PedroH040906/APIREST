@@ -1,4 +1,6 @@
 package pedro.sa.DTO.produto;
 
-public record ProdutoRequestDTO(String tipo, String tamanho, String cor, String tecido, Boolean estampa){
+import pedro.sa.model.Produto;
+
+public record ProdutoRequestDTO(Produto.Tipo tipo, Produto.Tamanho tamanho, String cor, String tecido, Boolean estampa){
 }

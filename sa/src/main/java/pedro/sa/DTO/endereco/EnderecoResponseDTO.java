@@ -1,4 +1,4 @@
-package pedro.sa.DTO.endereco.endereco;
+package pedro.sa.DTO.endereco;
 
 import pedro.sa.model.Endereco;
 
